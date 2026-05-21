@@ -17,13 +17,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    // ACTIVAR protección al entrar
     SecurityService.setSecureMode(true);
   }
 
   @override
   void dispose() {
-    // DESACTIVAR protección al salir
     SecurityService.setSecureMode(false);
     _emailController.dispose();
     _passwordController.dispose();
